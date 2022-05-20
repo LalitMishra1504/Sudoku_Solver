@@ -6,6 +6,7 @@ import {
 
 export const easy = () => {
     const Puzzle = getEasySudoku();
+    console.log(Puzzle);
     return Puzzle.map((row, r) => {
         return row.map((col, c) => {
             return (Puzzle[r][c]) ? `${Puzzle[r][c]}` : '0';

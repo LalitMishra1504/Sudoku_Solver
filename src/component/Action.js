@@ -12,18 +12,19 @@ const Action = () => {
     }
     const easySudoku = easy();
     const [sudoku, setSudoku] = useState(easySudoku);
+    console.log(sudoku);
     const [used, setUsed] = useState(true);
     const clearSudoku = () => {
         setUsed(false);
         document.getElementById('new').classList.remove('disabled');
-        return setSudoku(blankSudoku);
+        setSudoku(blankSudoku);
     };
     const generateRandom = () => {
         setUsed(true);
         document.getElementById('new').classList.add('disabled');
         const newEasySudoku = easy();
         console.log(newEasySudoku);
-        return setSudoku(newEasySudoku);
+        setSudoku(newEasySudoku);
     };
     const checkAnswer = () => {
         if (1)
