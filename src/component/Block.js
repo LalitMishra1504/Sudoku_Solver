@@ -5,6 +5,7 @@ const Block = ({ id, sudoku, setSudoku }) => {
     const changeHandler = async (e) => {
         const userInput = e.target.value || '0';
         const tileId = e.target.id;
+        console.log(tileId);
         if (!isValid(userInput)) {
             return toast.dark('Oops! Wrong Input', {
                 transition: Flip,
